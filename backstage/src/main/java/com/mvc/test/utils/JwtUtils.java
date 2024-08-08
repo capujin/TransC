@@ -1,58 +1,42 @@
 package com.mvc.test.utils;
 
 import com.auth0.jwt.JWT;
-import com.auth0.jwt.JWTCreator;
-import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.auth0.jwt.interfaces.JWTVerifier;
+import org.springframework.stereotype.Component;
 
-import java.util.Calendar;
-import java.util.Map;
+import java.util.Date;
 
-/**
- * @author qiumin
- * @classname JWTUtils
- * @Description love code
- * @date 2022-07-10 15:33
- */
-
+@Component
 public class JwtUtils {
 
-    private static final String SING = "!FhSD!#VhDZF%#FDBD";
+    private String secretKey = "!@###@!!@#"; // 请使用更安全的密钥
 
-    /**
-     * 获得Token
-     * @param map1 header
-     * @param map2 payload
-     * */
-    public static String getToken(Map<String,Object> map1, Map<String,String> map2){
-        Calendar instance = Calendar.getInstance();
-        instance.add(Calendar.SECOND,180); //过期时间
-
-        JWTCreator.Builder builder = JWT.create();
-        builder.withHeader(map1); //header
-
-        map2.forEach((k,v)->{builder.withClaim(k,v);}); //payload
-        builder.withExpiresAt(instance.getTime()); //过期时间
-        String token = builder.sign(Algorithm.HMAC256(SING));//签名
-        return token;
+    public String generateToken(String username) {
+        Algorithm algorithm = Algorithm.HMAC256(secretKey);
+        return JWT.create()
+                .withSubject(username)
+                .withIssuedAt(new Date())
+                .withExpiresAt(new Date(System.currentTimeMillis() + 1000 * 60 * 60)) // 1小时过期
+                .sign(algorithm);
     }
 
-    /**
-     * 验证token
-     * @param token 令牌
-     * */
-    public static void verify(String token){
-        JWTVerifier build = JWT.require(Algorithm.HMAC256(SING)).build();
-        build.verify(token);
+    public DecodedJWT decodeToken(String token) {
+        Algorithm algorithm = Algorithm.HMAC256(secretKey);
+        JWTVerifier verifier = JWT.require(algorithm).build();
+        return verifier.verify(token);
     }
 
-    /**
-     * 获取token中的信息
-     * @param token 令牌
-     * */
-    public static DecodedJWT analysis(String token){
-        return JWT.require(Algorithm.HMAC256(SING)).build().verify(token);
+    public String extractUsername(String token) {
+        return decodeToken(token).getSubject();
     }
 
+    public boolean isTokenExpired(String token) {
+        return decodeToken(token).getExpiresAt().before(new Date());
+    }
+
+    public boolean validateToken(String token, String username) {
+        return (username.equals(extractUsername(token)) && !isTokenExpired(token));
+    }
 }
