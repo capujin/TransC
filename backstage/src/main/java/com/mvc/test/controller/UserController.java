@@ -1,5 +1,6 @@
 package com.mvc.test.controller;
 
+import com.mvc.test.annotation.VerifyToken;
 import com.mvc.test.entity.User;
 import com.mvc.test.utils.JwtUtils;
 import com.mvc.test.service.UserService;
@@ -26,7 +27,7 @@ public class UserController {
         // 这里需要对用户名和密码进行验证
         User user = userService.authenticate(username, password); // 假设你有一个方法来验证用户
         if (user != null) {
-            String token = new JwtUtils().generateToken(user.getUsername(),user.getId());
+            String token = new JwtUtils().generateToken(user.getId());
             Map<String, String> data = new HashMap<>();
             data.put("token", token);
             return Result.successLogin(data);
@@ -35,11 +36,13 @@ public class UserController {
         }
     }
 
+    @VerifyToken
     @ApiOperation(value = "获取用户信息")
-    @PostMapping("/info")
-    public Result getUserInfo(String token) {
-        System.out.println(new JwtUtils().extractId(token));
-        return Result.success();
+    @GetMapping("/info")
+    public Result getUserInfo() {
+        System.out.println("999");
+//        System.out.println(new JwtUtils().extractId());
+        return Result.successLogin("123");
     }
 //    public Result updateUser(User user) {
 //        Result result = new Result();

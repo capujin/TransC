@@ -21,9 +21,9 @@ public class AuthController {
     public Map<String, String> createToken(@RequestBody Map<String, String> user) {
         String username = user.get("username");
         String id = user.get("id");
-        String token = jwtUtil.generateToken(username,id);
+//        String token = jwtUtil.generateToken(username,id);
         Map<String, String> response = new HashMap<>();
-        response.put("token", token);
+//        response.put("token", token);
         return response;
     }
 }

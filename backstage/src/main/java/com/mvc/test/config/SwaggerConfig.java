@@ -6,30 +6,60 @@ import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.oas.annotations.EnableOpenApi;
-import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.*;
 import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
-// http://localhost:2408/swagger-ui/index.html#/
-// 访问swagger-ui网址
+
+import java.util.Arrays;
+import java.util.List;
+
 @EnableOpenApi
-@Configuration  // 注入spring boot
+@Configuration
 public class SwaggerConfig {
-    @Bean   // 要想配置生效必须注入
+
+    @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com"))
                 .paths(PathSelectors.any())
-                .build();
+                .build()
+                .securitySchemes(Arrays.asList(apiKey(), basicAuthScheme()))
+                .securityContexts(Arrays.asList(securityContext()));
     }
-    private ApiInfo apiInfo()
-    {
+
+    private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring Boot2.7.6中使用Swagger3.0.0构建RESTful APIs")
-                .description("我可是描述信息哈~~更多Spring Boot相关文章请关注：http://blog.didispace.com/")
+                .title("Spring Boot 2.7.6 使用 Swagger 3.0.0 构建 RESTful APIs")
+                .description("更多Spring Boot相关文章请关注：http://blog.didispace.com/")
                 .version("8.0")
                 .build();
     }
-}
 
+    private ApiKey apiKey() {
+        return new ApiKey("JWT", "Authorization", "header");
+    }
+
+    private SecurityScheme basicAuthScheme() {
+        return new BasicAuth("basicAuth");
+    }
+
+    private SecurityContext securityContext() {
+        return SecurityContext.builder()
+                .securityReferences(defaultAuth())
+                .forPaths(PathSelectors.any())
+                .build();
+    }
+
+    private List<SecurityReference> defaultAuth() {
+        AuthorizationScope authorizationScope = new AuthorizationScope("global", "accessEverything");
+        AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
+        authorizationScopes[0] = authorizationScope;
+        return Arrays.asList(
+                new SecurityReference("JWT", authorizationScopes),
+                new SecurityReference("basicAuth", authorizationScopes)
+        );
+    }
+}
