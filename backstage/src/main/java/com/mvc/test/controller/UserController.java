@@ -1,14 +1,15 @@
 package com.mvc.test.controller;
 
 import com.mvc.test.entity.User;
+import com.mvc.test.utils.JwtUtils;
 import com.mvc.test.service.UserService;
 import com.mvc.test.utils.Result;
-import com.mvc.test.utils.response;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -20,11 +21,25 @@ public class UserController {
     private UserService userService;
 
     @ApiOperation(value = "登录")
-    @GetMapping("/login")
-    public Result login(@RequestBody Map<String, String> credentials){
+    @PostMapping("/login")
+    public Result login(@RequestParam String username, @RequestParam String password) {
+        // 这里需要对用户名和密码进行验证
+        User user = userService.authenticate(username, password); // 假设你有一个方法来验证用户
+        if (user != null) {
+            String token = new JwtUtils().generateToken(user.getUsername(),user.getId());
+            Map<String, String> data = new HashMap<>();
+            data.put("token", token);
+            return Result.successLogin(data);
+        } else {
+            return Result.inputError();
+        }
+    }
 
-//        return new response(code,msg,data);
-        return new Result(-1,"msg",123);
+    @ApiOperation(value = "获取用户信息")
+    @PostMapping("/info")
+    public Result getUserInfo(String token) {
+        System.out.println(new JwtUtils().extractId(token));
+        return Result.success();
     }
 //    public Result updateUser(User user) {
 //        Result result = new Result();

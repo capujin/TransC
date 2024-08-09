@@ -5,6 +5,7 @@ import com.mvc.test.entity.User;
 import java.util.List;
 
 public interface UserService {
+    public User authenticate(String username, String password);
 //    public List<User> loadAllUsers();
 //    public int save(User user);
 //    public String findUserByNameAndPassword(User user);

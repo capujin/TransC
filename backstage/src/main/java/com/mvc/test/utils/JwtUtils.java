@@ -13,12 +13,13 @@ public class JwtUtils {
 
     private String secretKey = "!@###@!!@#"; // 请使用更安全的密钥
 
-    public String generateToken(String username) {
+    public String generateToken(String username,String id) {
         Algorithm algorithm = Algorithm.HMAC256(secretKey);
         return JWT.create()
                 .withSubject(username)
+                .withKeyId(id)
                 .withIssuedAt(new Date())
-                .withExpiresAt(new Date(System.currentTimeMillis() + 1000 * 60 * 60)) // 1小时过期
+                .withExpiresAt(new Date(System.currentTimeMillis() + 10000 * 60 * 60)) // 1小时过期
                 .sign(algorithm);
     }
 
@@ -30,6 +31,9 @@ public class JwtUtils {
 
     public String extractUsername(String token) {
         return decodeToken(token).getSubject();
+    }
+    public String extractId(String token) {
+        return decodeToken(token).getKeyId();
     }
 
     public boolean isTokenExpired(String token) {
