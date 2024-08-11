@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private JwtUtils jwtUtils = new JwtUtils(); // Assuming JwtUtils has appropriate methods
     private ObjectMapper objectMapper = new ObjectMapper(); // 用于将 Result 转换为 JSON
-    private static final String[] EXCLUDED_PATHS = {"/user/login"};
+    private static final String[] EXCLUDED_PATHS = {/*"/user/login"*/};
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws IOException, ServletException {

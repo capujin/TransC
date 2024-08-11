@@ -1,13 +1,19 @@
 package com.mvc.test.controller;
 
+import com.mvc.test.DTO.UserDTO.UserDTO;
 import com.mvc.test.annotation.VerifyToken;
-import com.mvc.test.entity.User;
+import com.mvc.test.entity.Roles;
+import com.mvc.test.entity.User.User;
+import com.mvc.test.entity.User.UserSecurity;
+import com.mvc.test.service.RolesService;
 import com.mvc.test.utils.JwtUtils;
 import com.mvc.test.service.UserService;
 import com.mvc.test.utils.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -20,6 +26,8 @@ import java.util.Map;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private RolesService rolesService;
 
     @ApiOperation(value = "登录")
     @PostMapping("/login")
@@ -40,9 +48,17 @@ public class UserController {
     @ApiOperation(value = "获取用户信息")
     @GetMapping("/info")
     public Result getUserInfo() {
-        System.out.println("999");
-//        System.out.println(new JwtUtils().extractId());
-        return Result.successLogin("123");
+        try{
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            String id = (String) authentication.getPrincipal();
+            User user = userService.getUserById(id);
+            String role_name = rolesService.getRoleById(id).getRoleName();
+            int enabled = userService.getUserSecurityById(id).getEnabled();
+            UserDTO userDTO = new UserDTO(user.getId(),user.getUsername(),user.getCreatedAt(),role_name,enabled);
+            return Result.success(userDTO);
+        }catch (Exception e){
+            return Result.internalServerError();
+        }
     }
 //    public Result updateUser(User user) {
 //        Result result = new Result();

@@ -12,6 +12,8 @@ public class Result<T> {
     private int code;
     private String message;
     private T data;
+    private int total;
+    private int current_page;
 
     public Result(int code, String message, T data) {
         this.code = code;
@@ -37,6 +39,11 @@ public class Result<T> {
     // 用户名或密码错误
     public static <T> Result<T> inputError() {
         return new Result<>(-1, "账户名或密码错误", null);
+    }
+
+    // 自定错误信息
+    public static <T> Result<T> msgError(String msg) {
+        return new Result<>(-1, msg, null);
     }
 
     // 网络错误
