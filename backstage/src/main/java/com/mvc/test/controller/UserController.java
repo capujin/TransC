@@ -2,15 +2,14 @@ package com.mvc.test.controller;
 
 import com.mvc.test.DTO.UserDTO.UserDTO;
 import com.mvc.test.annotation.VerifyToken;
-import com.mvc.test.entity.Roles;
 import com.mvc.test.entity.User.User;
-import com.mvc.test.entity.User.UserSecurity;
 import com.mvc.test.service.RolesService;
-import com.mvc.test.utils.JwtUtils;
 import com.mvc.test.service.UserService;
+import com.mvc.test.utils.JwtUtils;
 import com.mvc.test.utils.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,6 +18,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 
+@Data
+class LoginRequest{
+    private String username;
+    private String password;
+}
 @RestController
 @RequestMapping("/user")
 @CrossOrigin
@@ -31,7 +35,9 @@ public class UserController {
 
     @ApiOperation(value = "登录")
     @PostMapping("/login")
-    public Result login(@RequestParam String username, @RequestParam String password) {
+    public Result login(@RequestBody LoginRequest loginRequest) {
+        String username = loginRequest.getUsername();
+        String password = loginRequest.getPassword();
         // 这里需要对用户名和密码进行验证
         User user = userService.authenticate(username, password); // 假设你有一个方法来验证用户
         if (user != null) {

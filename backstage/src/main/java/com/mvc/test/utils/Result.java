@@ -12,8 +12,6 @@ public class Result<T> {
     private int code;
     private String message;
     private T data;
-    private int total;
-    private int current_page;
 
     public Result(int code, String message, T data) {
         this.code = code;

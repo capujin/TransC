@@ -15,4 +15,7 @@ public interface RolesMapper extends BaseMapper<Roles> {
     @Insert("insert into roles(role_name) values(#{roleName})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     void insertRole(Roles role);
+
+    @Select("select * from roles where user_id = #{userId}")
+    Roles getRoleByUserId(String userId);
 }

@@ -1,12 +1,10 @@
 package com.mvc.test.service.Impl;
 
+import com.mvc.test.entity.Roles;
 import com.mvc.test.entity.User.User;
 import com.mvc.test.entity.User.UserRoles;
 import com.mvc.test.entity.User.UserSecurity;
-import com.mvc.test.mapper.AdminMapper;
-import com.mvc.test.mapper.UserMapper;
-import com.mvc.test.mapper.UserRolesMapper;
-import com.mvc.test.mapper.UserSecurityMapper;
+import com.mvc.test.mapper.*;
 import com.mvc.test.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +21,8 @@ public class UserServiceImpl implements UserService {
     private UserSecurityMapper userSecurityMapper;
     @Autowired
     private UserRolesMapper userRolesMapper;
+    @Autowired
+    private RolesMapper rolesMapper;
 
     @Override
     public User authenticate(String username, String password) {
@@ -71,6 +71,12 @@ public class UserServiceImpl implements UserService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public Roles getRoleNameById(String userId) {
+        Roles role = rolesMapper.getRoleByUserId(userId);
+        return role;
     }
 
 }
