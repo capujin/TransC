@@ -1,6 +1,6 @@
 <template>
     <div>
-        21331
+        登录页
     </div>
 </template>
 
@@ -30,13 +30,16 @@ async function login({ username, password }: { username: string, password: strin
 }
 
 onMounted(async () => {
-    await login({ username: '111', password: '2888' });
+    console.log(123);
+
+    // await login({ username: '111', password: '2888' });
 })
 
 </script>
 
 <style lang="scss" scoped>
 div {
+    font-size: 100px;
     background-color: $blue;
 }
 </style>

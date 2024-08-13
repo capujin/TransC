@@ -22,7 +22,7 @@
 }
 
 /* semantic color variables for this project */
-:root {
+/* :root {
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
@@ -56,9 +56,11 @@
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
-}
+}*/
 
 body {
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
