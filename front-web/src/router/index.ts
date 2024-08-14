@@ -11,12 +11,17 @@ export const router = createRouter({
         {
             path: '/404',
             name: '404',
-            component: () => import('@/views/error-stage/404.vue'),
+            component: () => import('@/views/error-stage/404.vue')
         },
         {
             path: '/:pathMatch(.*)*',
             name: 'NotFound',
-            redirect: '/404',
+            redirect: '/404'
         },
+        {
+            path:'/game',
+            name:'RunOfTheRabbit',
+            component: () => import('@/views/others/RunOfTheRabbit.vue')
+        }
     ]
 })

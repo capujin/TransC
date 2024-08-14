@@ -1,14 +1,24 @@
 @import './base.css';
 
-#app {
-}
+#app {}
 
 a,
-.green {
+.green {}
+
+@media (hover: hover) {}
+
+@media (min-width: 1024px) {}
+
+@media screen and (min-width: 375px) {
+    html {
+        font-size: calc(16px + 2*((100vw -375px)/39));
+    }
 }
 
-@media (hover: hover) {
+@media screen and (min-width: 414px) {
+    html {
+        font-size: 20px;
+    }
 }
 
-@media (min-width: 1024px) {
-}
+/*375px宽度使用16px基准尺寸，414px宽度时根字号大小正好是18pxfont-size:calc(16px+2*((100vw -375px)/39);@media screen and (min-width: 414px)html{font-size: 18px;*/
