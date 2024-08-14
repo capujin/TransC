@@ -113,7 +113,7 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-function navigate(name) {
+function navigate(name: string) {
     router.push(`/${name}`); // 替换为你的目标路由
 }
 
@@ -196,6 +196,7 @@ onMounted(() => {
 
     .logo {
         width: 100%;
+
         h1 {
             text-align: right;
             font-weight: 700;
@@ -322,11 +323,12 @@ onMounted(() => {
         position: relative;
         width: 100%;
         flex-direction: row;
-        .logo{
+
+        .logo {
             transform: scale(0.7);
             display: flex;
             flex-direction: column;
-            justify-content: start;            
+            justify-content: start;
         }
     }
 }

@@ -8,8 +8,8 @@ import { getSystemConfigPlugin as getSystemConfig } from '@/lin/plugin/getSystem
 const app = createApp(App);
 
 setTimeout(async () => {
-    const router = await getSystemConfig()
-    app.use(router)
+    const router = await getSystemConfig();
+    app.use(router);
     app.use(ElementPlus);
     app.config.globalProperties.$message = ElMessage;
     app.config.globalProperties.$notify = ElNotification;
