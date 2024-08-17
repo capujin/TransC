@@ -1,73 +1,72 @@
 import { router, type Route, type Routes } from '@/router'
 import Utils from "@/lin/util/utils";
 import stageConfig from '@/config/back_stage/'
-import backRouter from '@/router/routes'
+import backRouter from '@/router/back_route'
 // const rote = await getSystemConfig()
 // console.log(rote);
 const getsystemConfigFunc = async function () {
-    console.log("路由：", router);
     // const setBackStageConfig = store._actions.setBackStageConfig[0]
     // const setSystemConfig = store._actions.setSystemConfig[0]
     // const setSystem = store._actions.setSystem[0]
 
     // 格式化router路由
-    const updateBackStageConfig = function (stageConfig: Routes, pathPrefix: string) {
-        return stageConfig.map(item => {
-            const oldName = item.name.description
-            const newConfig = {
-                ...item,
-                route: `${pathPrefix}${item.route}`,
-                name: Symbol(`${pathPrefix}-${oldName}`)
-            }
-            if (item.children && item.children.length) {
-                newConfig.children = updateBackStageConfig(item.children, pathPrefix)
-            }
-            return newConfig
-        })
-    }
+    // const updateBackStageConfig = function (stageConfig: Routes, pathPrefix: string) {
+    //     return stageConfig.map(item => {
+    //         const oldName = item.name.description
+    //         const newConfig = {
+    //             ...item,
+    //             route: `${pathPrefix}${item.route}`,
+    //             name: Symbol(`${pathPrefix}-${oldName}`)
+    //         }
+    //         if (item.children && item.children.length) {
+    //             newConfig.children = updateBackStageConfig(item.children, pathPrefix)
+    //         }
+    //         return newConfig
+    //     })
+    // }
     // 获取菜单列表，把数据格式化成二维的
-    const getMenusList = function (menus: any[]) {
-        const menusList: any[] = []
-        menus.forEach(menu => {
-            if (menu.children && menu.children.length) {
-                menusList.push(...getMenusList(menu.children))
-            } else {
-                menusList.push(menu.label)
-            }
-        })
-        return menusList
-    }
+    // const getMenusList = function (menus: any[]) {
+    //     const menusList: any[] = []
+    //     menus.forEach(menu => {
+    //         if (menu.children && menu.children.length) {
+    //             menusList.push(...getMenusList(menu.children))
+    //         } else {
+    //             menusList.push(menu.label)
+    //         }
+    //     })
+    //     return menusList
+    // }
     // 
-    const isIncludesTitle = function (list, routerItem) {
-        return list.some(i => {
-            const title = i.replace(/\(.*\)/g, '')
-            const aliasList = i.match(/(?<=\()(.+?)(?=\))/g)
-            if (aliasList) {
-                return title === routerItem.meta.title && aliasList[0] === routerItem.meta.alias
-            } else {
-                return title === routerItem.meta.title
-            }
-        })
-    }
+    // const isIncludesTitle = function (list, routerItem) {
+    //     return list.some(i => {
+    //         const title = i.replace(/\(.*\)/g, '')
+    //         const aliasList = i.match(/(?<=\()(.+?)(?=\))/g)
+    //         if (aliasList) {
+    //             return title === routerItem.meta.title && aliasList[0] === routerItem.meta.alias
+    //         } else {
+    //             return title === routerItem.meta.title
+    //         }
+    //     })
+    // }
     // 获取全部菜单标题
-    const getMenus = function (menusTitleList, pathPrefix) {
-        const menus = []
-        for (const item of backRouter) {
-            if (isIncludesTitle(menusTitleList, item)) {
-                const oldName = typeof item.name === 'symbol' ? item.name.description : item.name
-                const routeObj = {
-                    ...item,
-                    path: `${pathPrefix}${item.path}`,
-                    name: Symbol(`${pathPrefix}-${oldName}`)
-                }
-                menus.push(routeObj)
-            }
-        }
-        return menus
-    }
-    await fetch('/api/v1/system').then(res => {
-        console.log(res);
-    })
+    // const getMenus = function (menusTitleList, pathPrefix) {
+    //     const menus = []
+    //     for (const item of backRouter) {
+    //         if (isIncludesTitle(menusTitleList, item)) {
+    //             const oldName = typeof item.name === 'symbol' ? item.name.description : item.name
+    //             const routeObj = {
+    //                 ...item,
+    //                 path: `${pathPrefix}${item.path}`,
+    //                 name: Symbol(`${pathPrefix}-${oldName}`)
+    //             }
+    //             menus.push(routeObj)
+    //         }
+    //     }
+    //     return menus
+    // }
+    // await fetch('/api/v1/system').then(res => {
+    //     console.log(res);
+    // })
     // .then(response => response.json())
     // .then(res => {
     //     if (res.code !== 0) {
@@ -149,21 +148,25 @@ const getsystemConfigFunc = async function () {
     //     })
     //     setBackStageConfig(newBackStageConfig)
     // })
-
-    let map = [{
-        path: '/',
-        name: 'login',
-        component: () => import('@/views/Login.vue')
-    },
-    {
-        path: '/login',
-        name: 'login',
-        component: () => import('@/views/Login.vue')
-    }];
-    map.map(i => (router.addRoute(i)))
+    console.log("后台管理路由：",backRouter);
+    console.log("后台管理路由2：",stageConfig);
+//     let map = [{
+//         path: '/',
+//         name: 'login',
+//         component: () => import('@/views/Login.vue')
+//     },
+//     {
+//         path: '/login',
+//         name: 'login',
+//         component: () => import('@/views/Login.vue')
+//     }
+// ];
+//     map.map(i => (router.addRoute(i)))
 }
 
 export const getSystemConfigPlugin = async function () {
+    console.log("初始化getSystemConfigPlugin");
+    
     await getsystemConfigFunc()
     return router
 }

@@ -1,20 +1,20 @@
 import './assets/main.css'
 import { createApp } from 'vue';
 import App from './App.vue';
-import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css'
-import { ElMessage, ElNotification } from 'element-plus'
+import useElementPlus from '@/lin/plugin/element'
 import { getSystemConfigPlugin as getSystemConfig } from '@/lin/plugin/getSystemConfig'
+
 const app = createApp(App);
 
 setTimeout(async () => {
     const router = await getSystemConfig();
     app.use(router);
-    app.use(ElementPlus);
-    app.config.globalProperties.$message = ElMessage;
-    app.config.globalProperties.$notify = ElNotification;
+
+    // 注册Icon组件、注册$message.success/error/info/warning方法
+    useElementPlus(app);    
+
     app.mount('#app');
 }, 0);
 
-
-export default app.config.globalProperties;
+export const proxy = app.config.globalProperties;

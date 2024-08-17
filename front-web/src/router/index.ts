@@ -3,28 +3,9 @@ import routes from './routes'
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes,
-    // [
-    //     {
-    //         path: '/about',
-    //         name: 'about',
-    //         component: () => import('../views/AboutView.vue')
-    //     },
-    //     {
-    //         path: '/404',
-    //         name: '404',
-    //         component: () => import('@/views/error-stage/404.vue')
-    //     },
-    //     {
-    //         path: '/:pathMatch(.*)*',
-    //         name: 'NotFound',
-    //         redirect: '/404'
-    //     },
-    //     {
-    //         path: '/game',
-    //         name: 'RunOfTheRabbit',
-    //         component: () => import('@/views/others/RunOfTheRabbit.vue')
-    //     }
-    // ]
+    scrollBehavior: () => ({
+        top: 0,
+    }),
 })
 router.beforeEach((to, from, next) => {
     // 如果路由配置了 meta.title，就设置为该值

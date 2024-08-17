@@ -29,25 +29,7 @@ let homeRouter: Routes = [
                 filePath: 'view/back-stage/targetData/main.vue',
                 inNav: true,
                 permission: ['金字塔目标管理'],
-            }, {
-                title: '遥感数据',
-                alias: '金字塔遥感数据',
-                type: 'view',
-                name: Symbol('jzt-remoteSense'),
-                route: '/admin/remoteSense',
-                filePath: 'views/back-stage/imageData/main.vue',
-                inNav: true,
-                permission: ['金字塔遥感数据'],
-            }, {
-                title: '开源数据',
-                alias: '金字塔开源数据',
-                type: 'view',
-                name: Symbol('jzt-openSource'),
-                route: '/admin/openSource',
-                filePath: 'views/back-stage/jzt/openSource/main.vue',
-                inNav: true,
-                permission: ['金字塔开源数据'],
-            },
+            }
         ]
     },
 ]
@@ -75,9 +57,10 @@ const deepReduceName = (target: Route | Routes) => {
                 }
                 deepReduceName(item)
             })
-        } else {
-            console.warn("config->back_stage->idnex.ts：路由children未定义");
         }
+        //  else {
+        //     console.warn("config->back_stage->idnex.ts：路由children未定义");
+        // }
     }
 }
 

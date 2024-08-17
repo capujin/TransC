@@ -47,7 +47,7 @@ const Utils: Utils = {
      * @param func ——函数体
      * @param wait ——延时
      */
-    debounce: (func, wait = 50) => debounce(func, wait),
+    debounce: (func, wait = 50) => debounce(func, wait, { leading: true }),
     /**
      * 节流函数
      * @param {*} func 函数体
