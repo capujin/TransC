@@ -1,521 +1,6 @@
 <template>
     <div class="container">
         <div class="form-x">
-            <svg _ngcontent-ng-c69819560="" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" app-canvas="" class="ng-tns-c69819560-0"
-                _nghost-ng-c3160086416="" viewBox="44.4392 -5.50854 20.49 19.2">
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="0" x2="64.9292" y2="0"
-                    stroke-width="0.10870026525198938" style=""></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="0" y1="-5.50854" x2="0"
-                    y2="13.69146" stroke-width="0.10870026525198938" style=""></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44" y1="-5.50854" x2="44"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="45" y1="-5.50854" x2="45"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="46" y1="-5.50854" x2="46"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="47" y1="-5.50854" x2="47"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="48" y1="-5.50854" x2="48"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="49" y1="-5.50854" x2="49"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="50" y1="-5.50854" x2="50"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="51" y1="-5.50854" x2="51"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="52" y1="-5.50854" x2="52"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="53" y1="-5.50854" x2="53"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="54" y1="-5.50854" x2="54"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="55" y1="-5.50854" x2="55"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="56" y1="-5.50854" x2="56"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="57" y1="-5.50854" x2="57"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="58" y1="-5.50854" x2="58"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="59" y1="-5.50854" x2="59"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="60" y1="-5.50854" x2="60"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="61" y1="-5.50854" x2="61"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="62" y1="-5.50854" x2="62"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="63" y1="-5.50854" x2="63"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="64" y1="-5.50854" x2="64"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="65" y1="-5.50854" x2="65"
-                    y2="13.69146" stroke-width="0.027175066312997345"></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="-6" x2="64.9292"
-                    y2="-6" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="-5" x2="64.9292"
-                    y2="-5" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="-4" x2="64.9292"
-                    y2="-4" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="-3" x2="64.9292"
-                    y2="-3" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="-2" x2="64.9292"
-                    y2="-2" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="-1" x2="64.9292"
-                    y2="-1" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="0" x2="64.9292" y2="0"
-                    stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="1" x2="64.9292" y2="1"
-                    stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="2" x2="64.9292" y2="2"
-                    stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="3" x2="64.9292" y2="3"
-                    stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="4" x2="64.9292" y2="4"
-                    stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="5" x2="64.9292" y2="5"
-                    stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="6" x2="64.9292" y2="6"
-                    stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="7" x2="64.9292" y2="7"
-                    stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="8" x2="64.9292" y2="8"
-                    stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="9" x2="64.9292" y2="9"
-                    stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="10" x2="64.9292"
-                    y2="10" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="11" x2="64.9292"
-                    y2="11" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="12" x2="64.9292"
-                    y2="12" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="13" x2="64.9292"
-                    y2="13" stroke-width="0.027175066312997345"></line>
-                <line _ngcontent-ng-c3160086416="" class="grid ng-star-inserted" x1="44.4392" y1="14" x2="64.9292"
-                    y2="14" stroke-width="0.027175066312997345"></line><!----><!----><!----><!---->
-                <path _ngcontent-ng-c3160086416="" class="filled ng-star-inserted"
-                    d="M 86.4 133.5 c 0 7.2 -6 12.5 -13.7 12.5 s -13.7 -5.4 -13.7 -12.5 v -16.3 h -43.8 c -8.4 0 -14.1 -6.4 -14.1 -13.5 c 0 -0.8 0.8 -4.4 2 -7 l 38.2 -88.2 c 2 -4.8 7.2 -7.8 12.3 -7.8 c 6.8 0 13.7 6 13.7 12.9 c 0 1.2 0 2.6 -0.8 4.4 c -11.5 26.7 -20.9 47.6 -32.4 74.2 H 59 v -30.4 c 0 -7.2 6 -12.5 13.7 -12.5 c 7.4 0 13.7 5.4 13.7 12.5 v 30.4 h 2.6 c 7.6 0 13.3 5.8 13.3 12.3 c 0 7 -5.8 12.5 -13.3 12.5 h -2.6 z m 116.8 -85.6 v 54.7 c 0 24.3 -16.3 43.6 -46 43.6 s -46 -19.3 -46 -43.6 v -54.7 c 0 -26.3 13.9 -47.4 46 -47.4 c 32.1 0.1 46 21.2 46 47.4 m -64.2 -1.4 v 56.1 c 0 11.3 6.4 19.1 18.3 19.1 s 18.3 -7.8 18.3 -19.1 v -56.1 c 0 -12.7 -5.2 -21.7 -18.3 -21.7 s -18.3 9 -18.3 21.7 m 162.4 87 c 0 7.2 -6 12.5 -13.7 12.5 c -7.8 0 -13.7 -5.4 -13.7 -12.5 v -16.3 h -43.8 c -8.4 0 -14.1 -6.4 -14.1 -13.5 c 0 -0.8 0.8 -4.4 2 -7 l 38.2 -88.2 c 2 -4.8 7.2 -7.8 12.3 -7.8 c 6.8 0 13.7 6 13.7 12.9 c 0 1.2 0 2.6 -0.8 4.4 c -11.5 26.7 -20.9 47.6 -32.4 74.2 H 274 v -30.4 c 0 -7.2 6 -12.5 13.7 -12.5 c 7.4 0 13.7 5.4 13.7 12.5 v 30.4 h 2.6 c 7.6 0 13.3 5.8 13.3 12.3 c 0 7 -5.8 12.5 -13.3 12.5 h -2.6 z"
-                    stroke-width="0.027175066312997345" style=""></path>
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="86.4" y1="140.7" x2="86.4"
-                    y2="133.5" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="80.4" y1="146" x2="72.7"
-                    y2="146" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="65" y1="146" x2="72.7" y2="146"
-                    stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="59" y1="140.6" x2="59"
-                    y2="133.5" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="6.8000000000000025" y1="117.2"
-                    x2="15.200000000000003" y2="117.2" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="1.1000000000000032" y1="110.8"
-                    x2="1.1000000000000032" y2="103.7" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="1.1000000000000032" y1="102.9"
-                    x2="1.1000000000000032" y2="103.7" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="1.9000000000000032" y1="99.3"
-                    x2="3.100000000000003" y2="96.7" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="43.300000000000004" y1="3.7"
-                    x2="41.300000000000004" y2="8.5" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="48.50000000000001"
-                    y1="0.7000000000000002" x2="53.60000000000001" y2="0.7000000000000002"
-                    stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="60.400000000000006"
-                    y1="0.7000000000000002" x2="53.60000000000001" y2="0.7000000000000002"
-                    stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="67.30000000000001" y1="6.7"
-                    x2="67.30000000000001" y2="13.600000000000001" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="67.30000000000001" y1="14.8"
-                    x2="67.30000000000001" y2="13.600000000000001" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="67.30000000000001"
-                    y1="16.200000000000003" x2="66.50000000000001" y2="18" stroke-width="0.027175066312997345" style="">
-                </line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="55.000000000000014" y1="44.7"
-                    x2="66.50000000000001" y2="18" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="45.600000000000016" y1="65.6"
-                    x2="34.100000000000016" y2="92.2" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="59" y1="54.6" x2="59"
-                    y2="61.800000000000004" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="65" y1="49.300000000000004"
-                    x2="72.7" y2="49.300000000000004" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="80.10000000000001"
-                    y1="49.300000000000004" x2="72.7" y2="49.300000000000004" stroke-width="0.027175066312997345"
-                    style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="86.4" y1="54.7" x2="86.4"
-                    y2="61.800000000000004" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="96.6" y1="92.2" x2="89"
-                    y2="92.2" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="102.3" y1="98" x2="102.3"
-                    y2="104.5" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="102.3" y1="111.5" x2="102.3"
-                    y2="104.5" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="96.5" y1="117" x2="89" y2="117"
-                    stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="203.2" y1="126.9" x2="203.2"
-                    y2="102.60000000000001" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="186.89999999999998"
-                    y1="146.20000000000002" x2="157.2" y2="146.20000000000002" stroke-width="0.027175066312997345"
-                    style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="127.5" y1="146.20000000000002"
-                    x2="157.2" y2="146.20000000000002" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="111.19999999999999"
-                    y1="126.90000000000002" x2="111.19999999999999" y2="102.60000000000002"
-                    stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="111.19999999999999"
-                    y1="21.60000000000002" x2="111.19999999999999" y2="47.90000000000002"
-                    stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="125.1" y1="0.5000000000000213"
-                    x2="157.2" y2="0.5000000000000213" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="189.29999999999998"
-                    y1="0.6000000000000213" x2="157.2" y2="0.5000000000000213" stroke-width="0.027175066312997345"
-                    style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="203.2" y1="21.70000000000002"
-                    x2="203.2" y2="47.90000000000002" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="139" y1="113.90000000000002"
-                    x2="139" y2="102.60000000000002" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="145.4" y1="121.70000000000002"
-                    x2="157.3" y2="121.70000000000002" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="169.20000000000002"
-                    y1="121.70000000000002" x2="157.3" y2="121.70000000000002" stroke-width="0.027175066312997345"
-                    style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="175.60000000000002"
-                    y1="113.90000000000002" x2="175.60000000000002" y2="102.60000000000002"
-                    stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="175.60000000000002"
-                    y1="33.800000000000026" x2="175.60000000000002" y2="46.50000000000002"
-                    stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="170.40000000000003"
-                    y1="24.800000000000022" x2="157.3" y2="24.800000000000022" stroke-width="0.027175066312997345"
-                    style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="144.2" y1="24.800000000000022"
-                    x2="157.3" y2="24.800000000000022" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="139" y1="33.800000000000026"
-                    x2="139" y2="46.50000000000002" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="301.4" y1="140.70000000000002"
-                    x2="301.4" y2="133.50000000000003" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="295.4" y1="146.00000000000003"
-                    x2="287.7" y2="146.00000000000003" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="279.9" y1="146.00000000000003"
-                    x2="287.7" y2="146.00000000000003" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="274" y1="140.60000000000002"
-                    x2="274" y2="133.50000000000003" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="221.79999999999998"
-                    y1="117.20000000000003" x2="230.2" y2="117.20000000000003" stroke-width="0.027175066312997345"
-                    style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="216.1" y1="110.80000000000003"
-                    x2="216.1" y2="103.70000000000003" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="216.1" y1="102.90000000000003"
-                    x2="216.1" y2="103.70000000000003" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="216.9" y1="99.30000000000003"
-                    x2="218.1" y2="96.70000000000003" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="258.3" y1="3.7000000000000286"
-                    x2="256.3" y2="8.500000000000028" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="263.5" y1="0.7000000000000286"
-                    x2="268.6" y2="0.7000000000000286" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="275.40000000000003"
-                    y1="0.7000000000000286" x2="268.6" y2="0.7000000000000286" stroke-width="0.027175066312997345"
-                    style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="282.3" y1="6.700000000000029"
-                    x2="282.3" y2="13.60000000000003" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="282.3" y1="14.80000000000003"
-                    x2="282.3" y2="13.60000000000003" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="282.3" y1="16.20000000000003"
-                    x2="281.5" y2="18.00000000000003" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="270" y1="44.70000000000003"
-                    x2="281.5" y2="18.00000000000003" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="260.6" y1="65.60000000000002"
-                    x2="249.1" y2="92.20000000000003" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="274" y1="54.60000000000003"
-                    x2="274" y2="61.80000000000003" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="280" y1="49.30000000000003"
-                    x2="287.7" y2="49.30000000000003" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="295.09999999999997"
-                    y1="49.30000000000003" x2="287.7" y2="49.30000000000003" stroke-width="0.027175066312997345"
-                    style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="301.4" y1="54.70000000000003"
-                    x2="301.4" y2="61.80000000000003" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="311.6" y1="92.20000000000003"
-                    x2="304" y2="92.20000000000003" stroke-width="0.027175066312997345" style=""></line><!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="317.3" y1="98.00000000000003"
-                    x2="317.3" y2="104.50000000000003" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="317.3" y1="111.50000000000003"
-                    x2="317.3" y2="104.50000000000003" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!---->
-                <line _ngcontent-ng-c3160086416="" class="control ng-star-inserted" x1="311.5" y1="117.00000000000003"
-                    x2="304" y2="117.00000000000003" stroke-width="0.027175066312997345" style=""></line>
-                <!----><!----><!----><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="86.4" cy="133.5"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="72.7" cy="146"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="59" cy="133.5"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="59" cy="117.2"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="15.200000000000003" cy="117.2"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="1.1000000000000032" cy="103.7"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="3.100000000000003" cy="96.7"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="41.300000000000004" cy="8.5"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="53.60000000000001"
-                    cy="0.7000000000000002" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="67.30000000000001"
-                    cy="13.600000000000001" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="66.50000000000001" cy="18"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="34.100000000000016" cy="92.2"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="59" cy="92.2"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="59" cy="61.800000000000004"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="72.7" cy="49.300000000000004"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="86.4" cy="61.800000000000004"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="86.4" cy="92.2"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="89" cy="92.2"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="102.3" cy="104.5"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="89" cy="117"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="86.4" cy="117"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!----><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="203.2" cy="47.900000000000006"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="203.2" cy="102.60000000000001"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="157.2" cy="146.20000000000002"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="111.19999999999999"
-                    cy="102.60000000000002" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="111.19999999999999"
-                    cy="47.90000000000002" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="157.2" cy="0.5000000000000213"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="203.2" cy="47.90000000000002"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="139" cy="46.50000000000002"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="139" cy="102.60000000000002"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="157.3" cy="121.70000000000002"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="175.60000000000002"
-                    cy="102.60000000000002" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="175.60000000000002"
-                    cy="46.50000000000002" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="157.3" cy="24.800000000000022"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="139" cy="46.50000000000002"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="301.4" cy="133.50000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="287.7" cy="146.00000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="274" cy="133.50000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="274" cy="117.20000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="230.2" cy="117.20000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="216.1" cy="103.70000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="218.1" cy="96.70000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="256.3" cy="8.500000000000028"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="268.6" cy="0.7000000000000286"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="282.3" cy="13.60000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="281.5" cy="18.00000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="249.1" cy="92.20000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="274" cy="92.20000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="274" cy="61.80000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="287.7" cy="49.30000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="301.4" cy="61.80000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="301.4" cy="92.20000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="304" cy="92.20000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="317.3" cy="104.50000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="304" cy="117.00000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="target ng-star-inserted" cx="301.4" cy="117.00000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!----><!----><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="86.4" cy="140.7"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="80.4" cy="146"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!----><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="59" cy="140.6"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="6.8000000000000025" cy="117.2"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="1.1000000000000032" cy="110.8"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="1.1000000000000032" cy="102.9"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="1.9000000000000032" cy="99.3"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="43.300000000000004" cy="3.7"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="48.50000000000001"
-                    cy="0.7000000000000002" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="60.400000000000006"
-                    cy="0.7000000000000002" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="67.30000000000001" cy="6.7"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="67.30000000000001" cy="14.8"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="67.30000000000001"
-                    cy="16.200000000000003" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="55.000000000000014" cy="44.7"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="45.600000000000016" cy="65.6"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="59" cy="54.6"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="65" cy="49.300000000000004"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="80.10000000000001"
-                    cy="49.300000000000004" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="86.4" cy="54.7"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="96.6" cy="92.2"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="102.3" cy="98"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="102.3" cy="111.5"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="96.5" cy="117"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="203.2" cy="126.9"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="186.89999999999998"
-                    cy="146.20000000000002" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!----><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="111.19999999999999"
-                    cy="126.90000000000002" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="111.19999999999999"
-                    cy="21.60000000000002" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="125.1" cy="0.5000000000000213"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="189.29999999999998"
-                    cy="0.6000000000000213" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="203.2" cy="21.70000000000002"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="139" cy="113.90000000000002"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="145.4" cy="121.70000000000002"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!----><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="175.60000000000002"
-                    cy="113.90000000000002" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="175.60000000000002"
-                    cy="33.800000000000026" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="170.40000000000003"
-                    cy="24.800000000000022" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!----><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="139" cy="33.800000000000026"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="301.4" cy="140.70000000000002"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="295.4" cy="146.00000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="279.9" cy="146.00000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="274" cy="140.60000000000002"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="221.79999999999998"
-                    cy="117.20000000000003" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="216.1" cy="110.80000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="216.1" cy="102.90000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="216.9" cy="99.30000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="258.3" cy="3.7000000000000286"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="263.5" cy="0.7000000000000286"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="275.40000000000003"
-                    cy="0.7000000000000286" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="282.3" cy="6.700000000000029"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="282.3" cy="14.80000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="282.3" cy="16.20000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="270" cy="44.70000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="260.6" cy="65.60000000000002"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="274" cy="54.60000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="280" cy="49.30000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="295.09999999999997"
-                    cy="49.30000000000003" r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="301.4" cy="54.70000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="311.6" cy="92.20000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="317.3" cy="98.00000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="317.3" cy="111.50000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle><!----><!---->
-                <circle _ngcontent-ng-c3160086416="" class="control ng-star-inserted" cx="311.5" cy="117.00000000000003"
-                    r="0.08152519893899203" stroke-width="0.3261007957559681" style=""></circle>
-                <!----><!----><!----><!----><!----><!----><!----><!---->
-            </svg>
             <div class="left"></div>
             <div class="content" v-loading="loading" element-loading-background="rgba(255, 255, 255, 0.2)">
                 <h1 class="title">
@@ -574,14 +59,16 @@
 </template>
 
 <script name="Login" lang="ts" setup>
-import { Base64 } from 'js-base64'
+// import { Base64 } from 'js-base64'
 import { type Response } from '@/lin/interface/type'
 import Util from '@/lin/util/utils'
 import User from '@/lin/model/admin'
 import { proxy } from '@/main'
 import { saveTokens } from '@/lin/util/token'
 import { ref, reactive, onMounted } from 'vue';
-import type { FormInstance, FormRules, InputInstance } from 'element-plus'
+import type { FormInstance, InputInstance } from 'element-plus'
+import { useUserStore } from '@/stores'
+const store = useUserStore();
 const loading = ref(false);
 const loginForm = ref<FormInstance>();
 const autoFocus = ref<InputInstance>()
@@ -605,23 +92,41 @@ const form = reactive({
 //     }
 // }
 const submitForm = Util.debounce((formEl: FormInstance | undefined) => {
-    loading.value = true;
     if (!formEl) return
-    formEl.validate((valid) => {
+    console.log("存储：", store.logined);
+    let { username, password } = { ...form };
+    let data = {
+        username,
+        password    //:Base64.encode(password)
+
+    }
+    loading.value = true;
+    formEl.validate(async (valid) => {
         if (valid) {
-            proxy.$message.success("成功提交");
-            return;
-        } else {
-            proxy.$message.error("输入错误");
+            const tokens: Response = await User.getToken(data);
+            if (tokens.code === 0) {
+                saveTokens(tokens.data.token);
+            } else {
+                proxy.$message.error(tokens.message);
+            }
+            console.log(data);
             return;
         }
     })
-    setTimeout(() => {
-        loading.value = false;
-    }, 2000)
-
+    loading.value = false;
 }, 500)
-
+async function getInformation() {
+    try {
+        // 尝试获取当前用户信息
+        const authsRes = await User.getPermissions()  // 获取用户权限列表
+        // const user = await User.getInformation()  // 获取用户信息
+        // this.setUserAndState(user.data)
+        // this.setUserPermissions(authsRes.data.permissions)
+        // this.setUserMenus(authsRes.data.menus)
+    } catch (e) {
+        console.log(e)
+    }
+};
 const resetForm = (formEl: FormInstance | undefined) => {
     if (!formEl) return
     formEl.resetFields()
@@ -1114,7 +619,7 @@ onMounted(() => {
 
 }
 
-::v-deep .el-form {
+:deep(.el-form) {
     .el-form-item__label {
         font-size: inherit;
         color: rgb(255, 255, 255);

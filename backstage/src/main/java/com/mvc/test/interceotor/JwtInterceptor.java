@@ -26,28 +26,40 @@ public class JwtInterceptor implements HandlerInterceptor {
             VerifyToken verifyToken = handlerMethod.getMethodAnnotation(VerifyToken.class);
             if (verifyToken != null && verifyToken.required()) {
                 String authHeader = request.getHeader("Authorization");
-                if (authHeader != null && authHeader.startsWith("Bearer ")) {
-                    String token = authHeader.substring(7);
-                    try {
-                        String userId = jwtUtils.extractId(token);
-                        if (userId != null) {
-                            // 可以在这里设置认证对象到 SecurityContext 中
-                             UsernamePasswordAuthenticationToken authentication =
-                                    new UsernamePasswordAuthenticationToken(userId, null, new ArrayList<>());
-                             SecurityContextHolder.getContext().setAuthentication(authentication);
-                            return true;
+                if (authHeader != null) {
+                    String[] authHeaders = authHeader.split(",");
+                    for (String header : authHeaders) {
+                        header = header.trim();
+                        if (header.startsWith("Bearer ")) {
+                            // 只处理 Bearer 令牌
+                            String token = header.substring(7); // 提取 Bearer 令牌
+                            try {
+                                System.out.println("userId:"+token);
+                                String userId = jwtUtils.extractId(token);
+                                System.out.println("userId----");
+                                if (userId != null) {
+                                    // 可以在这里设置认证对象到 SecurityContext 中
+                                    UsernamePasswordAuthenticationToken authentication =
+                                            new UsernamePasswordAuthenticationToken(userId, null, new ArrayList<>());
+                                    SecurityContextHolder.getContext().setAuthentication(authentication);
+                                    return true;
+                                }
+                            } catch (Exception e) {
+                                System.out.println("这里的问题");
+                                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                                response.setContentType("application/json; charset=UTF-8");
+                                Result result = Result.internalServerError();
+                                response.getWriter().write(objectMapper.writeValueAsString(result));
+                                return false;
+                            }
+                            break;
                         }
-                    } catch (Exception e) {
-                        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                        response.setContentType("application/json; charset=UTF-8");
-                        Result result = Result.internalServerError();
-                        response.getWriter().write(objectMapper.writeValueAsString(result));
-                        return false;
+
                     }
                 }else{
                     response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                     response.setContentType("application/json; charset=UTF-8");
-                    Result result = Result.unauthorized();
+                    Result result = new Result(-1, "请检查Header请求头确认是Bearer验证", null);
                     response.getWriter().write(objectMapper.writeValueAsString(result));
                     return false;
                 }

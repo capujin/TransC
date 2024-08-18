@@ -1,5 +1,6 @@
 package com.mvc.test.service.Impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mvc.test.entity.Roles;
 import com.mvc.test.entity.User.User;
 import com.mvc.test.entity.User.UserRoles;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
     @Resource
     private UserMapper userMapper;
@@ -74,7 +75,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Roles getRoleNameById(String userId) {
+    public Roles getRoleById(String userId) {
         Roles role = rolesMapper.getRoleByUserId(userId);
         return role;
     }

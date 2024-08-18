@@ -7,7 +7,6 @@ export function saveTokens(accessToken: string) {
     localStorage.setItem('access_token', `Bearer ${accessToken}`)
 }
 
-
 /**
  * 获得某个token
  * @param {string} tokenKey

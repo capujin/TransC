@@ -2,7 +2,10 @@ package com.mvc.test.controller;
 
 import com.mvc.test.DTO.UserDTO.UserDTO;
 import com.mvc.test.annotation.VerifyToken;
+import com.mvc.test.entity.Permissions;
+import com.mvc.test.entity.Roles;
 import com.mvc.test.entity.User.User;
+import com.mvc.test.mapper.PermissionMapper;
 import com.mvc.test.service.RolesService;
 import com.mvc.test.service.UserService;
 import com.mvc.test.utils.JwtUtils;
@@ -15,7 +18,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Data
@@ -32,8 +38,10 @@ public class UserController {
     private UserService userService;
     @Autowired
     private RolesService rolesService;
+    @Resource
+    private PermissionMapper permissionMapper;
 
-    @ApiOperation(value = "登录")
+    @ApiOperation(value = "获取Token")
     @PostMapping("/login")
     public Result login(@RequestBody LoginRequest loginRequest) {
         String username = loginRequest.getUsername();
@@ -100,4 +108,28 @@ public class UserController {
 //        }
 //        return result;
 //    }
+
+    @VerifyToken
+    @ApiOperation(value = "获取用户拥有的权限")
+    @GetMapping("/permissions")
+    public Result getUserPermissions(){
+//        try{
+//            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//            String id = (String) authentication.getPrincipal();
+//        System.out.println("id"+id);
+//            Roles role = userService.getRoleById(id);
+//            List<String> pms = rolesService.getPermissonsById(role.getId());
+//            List<String> pms = rolesService.getPermissonsById("2");
+//            System.out.println("执行没问题");
+            System.out.println("我看行-----"+permissionMapper.selectByMap(Collections.singletonMap("role_id","2")));
+//            System.out.println("执行有大问题");
+//            int enabled = userService.getUserSecurityById(id).getEnabled();
+//            UserDTO userDTO = new UserDTO(user.getId(),user.getUsername(),user.getCreatedAt(),role_name,enabled);
+            return Result.success();
+
+//        }catch (Exception e){
+//            return Result.internalServerError();
+//        }
+//        return Result.success();
+    }
 }

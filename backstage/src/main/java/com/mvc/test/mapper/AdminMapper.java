@@ -1,10 +1,13 @@
 package com.mvc.test.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mvc.test.entity.Permissions;
 import com.mvc.test.entity.User.User;
 import org.apache.ibatis.annotations.*;
+import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 
 import java.util.List;
-
+@Mapper
 public interface AdminMapper {
 //通过id查询用户
     @Select("select * from users where id = #{id}")

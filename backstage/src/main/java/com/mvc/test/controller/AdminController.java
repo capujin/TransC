@@ -41,7 +41,7 @@ public class AdminController {
         // 从 Authentication 对象中获取用户信息
         if (authentication != null && authentication.getPrincipal() instanceof String) {
             String userId = (String) authentication.getPrincipal();
-            String roleName = userService.getRoleNameById(userId).getRoleName();
+            String roleName = userService.getRoleById(userId).getRoleName();
             if(Objects.equals(roleName, "管理员") || Objects.equals(roleName, "超级管理员")){
                 //        如果用户名已经存在则不能创建新用户
                 if(userService.checkUsernameExists(userRegistrationDTO.getUsername())){

@@ -1,15 +1,20 @@
 package com.mvc.test.entity.User;
 
-
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
+@TableName(value = "users")
 public class User {
+    @TableId(value = "id",type = IdType.AUTO)
     private String id;
+    @TableField(value = "username")
     private String username;
+    @TableField(value = "password")
     private String password;
+    @TableField(value = "created_at",fill = FieldFill.INSERT)
     private Date createdAt;
 
     public String getId() {
@@ -30,22 +35,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Date getCreated_at() {
-        return createdAt;
-    }
-
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                ", username='" + username + '\'' +
-                ", created_at=" + createdAt +
-                '}';
     }
 }
