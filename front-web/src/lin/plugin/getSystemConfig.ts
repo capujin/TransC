@@ -2,6 +2,10 @@ import { router, type Route, type Routes } from '@/router'
 import Utils from "@/lin/util/utils";
 import stageConfig from '@/config/back_stage/'
 import backRouter from '@/router/back_route'
+import FRONT_CONFIG from "@/views/front-stage/FRONT_CONFIG";
+import type { RouteRecordInfo, RouteRecordRaw } from 'vue-router';
+import * as Views from '@/views/front-stage'
+
 // const rote = await getSystemConfig()
 // console.log(rote);
 const getsystemConfigFunc = async function () {
@@ -148,25 +152,71 @@ const getsystemConfigFunc = async function () {
     //     })
     //     setBackStageConfig(newBackStageConfig)
     // })
-    console.log("后台管理路由：",backRouter);
-    console.log("后台管理路由2：",stageConfig);
-//     let map = [{
-//         path: '/',
-//         name: 'login',
-//         component: () => import('@/views/Login.vue')
-//     },
-//     {
-//         path: '/login',
-//         name: 'login',
-//         component: () => import('@/views/Login.vue')
-//     }
-// ];
-//     map.map(i => (router.addRoute(i)))
+    const componentMap = {
+        '/main': 'MainView',
+        '/pathEditor': 'PathEditorView',
+        '/another': 'AnotherView', // 为新的组件添加映射
+    };
+    const portalRoutes: RouteRecordRaw[] = []
+    Array.isArray(FRONT_CONFIG['/transc']) && FRONT_CONFIG['/transc'].forEach((item:string) => {
+        const path = `${'/transc'}${item === '/main' ? '' : item}`
+        const componentName = isKey(item, componentMap) ? componentMap[item] : 'MainView'; // 使用映射获取组件名
+        const _component = Views[componentName as keyof typeof Views];
+        portalRoutes.push({
+            path,
+            name: 'front',
+            component: () => import('@/views/home/front-home.vue'),
+            children: [{
+                name: 'frontIndex',
+                path,
+                component: _component,
+                meta: {
+                    title: '首页'
+                }
+            }]
+        })
+    })
+    portalRoutes.forEach(route => {
+        router.addRoute(route);
+    })
+    // FRONT_CONFIG['/common'].forEach(item => {
+    //     const path = `/common${item}`
+    //     portalRoutes.push({
+    //         path,
+    //         name: 'portalIndex',
+    //         component: () => import('@/views/home/portal-home'),
+    //         children: [{
+    //             name: 'portalIndex',
+    //             path,
+    //             component: () => import(`@/views/portal-page/common${item}/main.vue`),
+    //             meta: {
+    //                 title: '首页'
+    //             }
+    //         }]
+    //     })
+    // })
+    console.log("后台管理路由：", backRouter);
+    console.log("后台管理路由2：", stageConfig);
+    //     let map = [{
+    //         path: '/',
+    //         name: 'login',
+    //         component: () => import('@/views/Login.vue')
+    //     },
+    //     {
+    //         path: '/login',
+    //         name: 'login',
+    //         component: () => import('@/views/Login.vue')
+    //     }
+    // ];
+    //     map.map(i => (router.addRoute(i)))
 }
-
+// 类型守卫函数，检查item是否是componentMap的有效键
+function isKey<T>(key: string, obj: Record<string, T>): key is keyof typeof obj {
+    return key in obj;
+}
 export const getSystemConfigPlugin = async function () {
     console.log("初始化getSystemConfigPlugin");
-    
+
     await getsystemConfigFunc()
     return router
 }

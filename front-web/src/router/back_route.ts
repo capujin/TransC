@@ -21,10 +21,11 @@ const homeRouter: Array<RouteRecordRaw> = []
 
 deepTravel(stageConfig, viewConfig => {
   // 构造实际能用的view路由
+  console.log("`@/${viewConfig.filePath}`:",`@/${viewConfig.filePath}`);
   const viewRouter = {
     path: viewConfig.route,
     name: viewConfig.name,
-    component: () => import(`@/${viewConfig.filePath}`),
+    component: () => import(/* @vite-ignore */`@/${viewConfig.filePath}`),
     meta: {
       title: viewConfig.title,
       alias: viewConfig.alias,

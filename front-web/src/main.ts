@@ -7,7 +7,7 @@ import useElementPlus from '@/lin/plugin/element'
 import { getSystemConfigPlugin as getSystemConfig } from '@/lin/plugin/getSystemConfig'
 
 const app = createApp(App);
-const pinia = createPinia()
+const pinia = createPinia();
 setTimeout(async () => {
     const router = await getSystemConfig();
     app.use(router);

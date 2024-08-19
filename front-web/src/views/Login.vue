@@ -26,14 +26,14 @@
                     <el-form-item label="密码：" prop="password"
                         :rules="[{ required: true, message: '密码不能为空', trigger: 'submit' }]">
                         <el-input v-model="form.password" type="password" autocomplete="off" show-password
-                            @keyup.enter="submitForm(loginForm)" />
+                            @keyup.enter="debouncelogin" />
                     </el-form-item>
                     <!-- <el-form-item>
                         <el-button @click="resetForm(loginForm)">Reset</el-button>
                     </el-form-item> -->
                 </el-form>
                 <div class="options">
-                    <a href="javascript:;" class="button button--piyo" @click="submitForm(loginForm)">
+                    <a href="javascript:;" class="button button--piyo" @click="debouncelogin">
                         <div class="button__wrapper">
                             <span class="button__text">登录</span>
                         </div>
@@ -49,9 +49,9 @@
                             </div>
                         </div>
                     </a>
-                    <!-- <el-button type="primary" @click="submitForm(loginForm)">
+                    <el-button type="primary" @click="toggle">
                         登录
-                    </el-button> -->
+                    </el-button>
                 </div>
             </div>
         </div>
@@ -76,45 +76,41 @@ const form = reactive({
     username: '',
     password: ''
 })
-// async function login({ username, password }: { username: string, password: string }) {
-//     loading.value = true;
-//     const data = {
-//         username,
-//         password
-//         // password: Base64.encode(password)
-//     }
-//     const tokens = await User.getToken(data) as Response;
-//     loading.value = false;
-//     if (tokens.code === 0) {
-//         saveTokens(tokens.data.token)
-//     } else {
-//         proxy.$message.error(tokens.message)
-//     }
-// }
-const submitForm = Util.debounce((formEl: FormInstance | undefined) => {
+const toggle = (user: { name: string, pwd: string } = { name: '456', pwd: '3333' }) => {
+    user = user;
+}
+function login(formEl: FormInstance | undefined) {
     if (!formEl) return
     console.log("存储：", store.logined);
     let { username, password } = { ...form };
     let data = {
         username,
         password    //:Base64.encode(password)
-
     }
     loading.value = true;
     formEl.validate(async (valid) => {
-        if (valid) {
-            const tokens: Response = await User.getToken(data);
-            if (tokens.code === 0) {
-                saveTokens(tokens.data.token);
-            } else {
-                proxy.$message.error(tokens.message);
+        try {
+            if (valid) {
+                const tokens: Response = await User.getToken(data);
+                if (tokens.code === 0) {
+                    saveTokens(tokens.data.token);
+                } else {
+                    proxy.$message.error(tokens.message);
+                }
+                await getInformation()
+                // console.warn(data);
+                return;
             }
-            console.log(data);
-            return;
+        } catch (e) {
+            loading.value = false
+            console.warn(e)
         }
+
     })
     loading.value = false;
-}, 500)
+}
+
+const debouncelogin = Util.debounce(() => login(loginForm.value), 500);
 async function getInformation() {
     try {
         // 尝试获取当前用户信息

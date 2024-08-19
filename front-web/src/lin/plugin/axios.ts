@@ -1,7 +1,7 @@
 import axios, { type AxiosInstance, type AxiosRequestConfig } from 'axios';
 import { getToken, saveTokens } from '@/lin/util/token'
 import qs from 'qs';
-import vue from '@/main';
+import {proxy} from '@/main';
 
 class CustomError extends Error {
     source: string;
@@ -150,16 +150,16 @@ _axios.interceptors.response.use(
             //     }
             // }
 
-            vue.$message({
-                message: '这是一个错误信息',
-                type: 'error',
-            });
+            // proxy.$message({
+            //     message: '这是一个错误信息',
+            //     type: 'error',
+            // });
             reject()
         })
     },
     error => {
         if (!error.response) {
-            vue.$notify({
+            proxy.$notify({
                 title: 'Network Error',
                 dangerouslyUseHTMLString: true,
                 message: '<strong class="my-notify">请检查 API 是否异常</strong>',
@@ -168,10 +168,7 @@ _axios.interceptors.response.use(
 
         // 判断请求超时
         if (error.code === 'ECONNABORTED' && error.message.indexOf('timeout') !== -1) {
-            vue.$message({
-                type: 'warning',
-                message: '请求超时',
-            })
+            proxy.$message.warning('请求超时')
         }
         return Promise.reject(error)
     },
