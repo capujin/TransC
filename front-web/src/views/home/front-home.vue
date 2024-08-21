@@ -1,6 +1,5 @@
 <template>
     <div>
-        front-stage
         <RouterView />
     </div>
 </template>
