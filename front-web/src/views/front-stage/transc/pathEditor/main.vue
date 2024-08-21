@@ -1,8 +1,10 @@
 <template>
     <div class="container">
         <!--  style="width: 100vw;height: 100vh;" -->
-        <svg id="svgEl" ref="svgEl" @mousedown="mouseDownForDrag($event)"style="height: 100vh;" :viewBox="`0 0 ${svgParam.width} ${svgParam.height}`">
+        <svg id="svgEl" ref="svgEl" @mousedown="mouseDownForDrag($event)"style="width: 100vw;height: 100vh;" :viewBox="`0 0 ${svgParam.width+scaling} ${svgParam.height+scaling}`">
             <!-- <rect width="100" height="100" x="0" fill="#008d46" /> -->
+            <line x1="-146.379" y1="0" x2="174.72100000000003" y2="0" stroke-width="1.6006978575778446" style=""></line>
+            <line x1="0" y1="-137.236" x2="0" y2="145.464" stroke-width="1.6006978575778446" style=""></line>
             <line v-for="i in svgParam.num_x" x1="0" :y1="i*10" :x2="svgParam.width" :y2="i*10" stroke="#ccc" stroke-width="0.1px"/>
             <line v-for="i in svgParam.num_y" :x1="i*10" :y1="0" :x2="i*10" :y2="svgParam.height" stroke="#ccc" stroke-width="0.1px"/>
         </svg>
@@ -49,6 +51,8 @@ let resizeBarEl = ref<HTMLElement | null>(null);
 let resizePannelEl = ref<HTMLElement | null>(null);
 
 const currentWidth = ref<Number>(0);
+// 缩放比例
+const scaling = ref<number>(0);
 
 const svgParam = reactive<{
     width: number,
@@ -62,8 +66,8 @@ const svgParam = reactive<{
         height: number
     }
 }>({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: 100,
+    height: 100,
     num_x:Math.floor(window.innerHeight/10),
     num_y:Math.floor(window.innerWidth/10),
     view: {
@@ -73,7 +77,10 @@ const svgParam = reactive<{
         height: 300
     }
 })
-
+const handleResize = () =>{
+    svgParam.width = window.innerWidth;
+    svgParam.height = window.innerHeight;
+}
 const fold = ref(false);
 watch(fold, (newV) => {
     if (newV) {
@@ -147,27 +154,27 @@ const mouseUp = () => {
     // 释放鼠标时移除监听
     document.removeEventListener('mousemove', moveForResize);
     document.removeEventListener('mousemove', moveForDrag);
-    document.removeEventListener('mouseup', mouseUp);
     document.removeEventListener("keydown", handleKeyDrag)
-    // document.removeEventListener("keydown", handleKeyWheel)
     document.removeEventListener("keyup", handleKeyDrag)
-    // document.removeEventListener("keyup", handleKeyWheel)
+    document.removeEventListener('mouseup', mouseUp);
 }
 
 const handleKeyDrag = (e: KeyboardEvent) => {
-    console.log(e); 
     e.preventDefault();
-    if (e.code === 'Space' && !e.repeat) {
+    if (e.code === 'Space') {
         document.body.style.cursor = 'grab';
+        console.log("触发");
+        
         // document.addEventListener('mousemove', moving);
         // document.addEventListener('mouseup', mouseUp);
     }
-    if((e.code === 'ControlLeft' || e.code === 'ControlRight') && !e.repeat){
-        console.log("触发");
-    }
-    // if (e.type === 'keyup') {
-    //     mouseUp()
+    // if((e.code === 'ControlLeft' || e.code === 'ControlRight') && !e.repeat){
+    //     console.log("触发");
     // }
+    if (e.type === 'keyup') {
+        console.log("键盘溢出");
+        mouseUp()
+    }
 }
 // const handleKeyWheel = (e: KeyboardEvent) => {
 //     e.preventDefault();
@@ -182,21 +189,34 @@ const handleKeyDrag = (e: KeyboardEvent) => {
 //         mouseUp()
 //     }
 // }
+const handleZoom = (e:WheelEvent) =>{
+    // console.log(e);
+    if(e.deltaY<0){
+        console.log("放大");
+        scaling.value -=20
+    }else{
+        console.log("缩小");
+        scaling.value +=20
+    }
+    
+}
 onMounted(() => {
     // svgEl.value?.style.width = 100 +'vw';
     // svgEl.value?.height = 100 +'vh';
     currentWidth.value = store.defaultWidth;
-    document.addEventListener("keydown", handleKeyDrag)
-    document.addEventListener("keyup", handleKeyDrag)
+    document.addEventListener("keydown", handleKeyDrag);
+    document.addEventListener("keyup", handleKeyDrag);
+    window.addEventListener("resize",handleResize);
+    document.addEventListener("wheel", handleZoom);
     // document.addEventListener("keydown", handleKeyWheel)
     // document.addEventListener("keyup", handleKeyWheel)
 });
 
 onBeforeUnmount(() => {
-    document.removeEventListener("keydown", handleKeyDrag)
-    // document.removeEventListener("keydown", handleKeyWheel)
-    document.removeEventListener("keyup", handleKeyDrag)
-    // document.removeEventListener("keyup", handleKeyWheel)
+    document.removeEventListener("keydown", handleKeyDrag);
+    document.removeEventListener("keyup", handleKeyDrag);
+    window.removeEventListener("resize",handleResize);
+    document.addEventListener("wheel", handleZoom);
 })
 </script>
 
@@ -289,10 +309,13 @@ onBeforeUnmount(() => {
         &.fold {
             padding: 0;
         }
+        &:hover .collapse-btn{
+            display: flex;
+        }
 
         .collapse-btn {
             cursor: pointer;
-            display: flex;
+            display: none;
             justify-content: center;
             align-items: center;
             user-select: none;
@@ -326,7 +349,7 @@ onBeforeUnmount(() => {
         }
 
         &:has(.resize-controler:active) {
-            background-color: #ffffff0e
+            background-color: #303539;
         }
 
         .resize-controler {
