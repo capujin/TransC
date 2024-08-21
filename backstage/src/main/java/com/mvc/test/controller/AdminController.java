@@ -45,20 +45,20 @@ public class AdminController {
             if(Objects.equals(roleName, "管理员") || Objects.equals(roleName, "超级管理员")){
                 //        如果用户名已经存在则不能创建新用户
                 if(userService.checkUsernameExists(userRegistrationDTO.getUsername())){
-                    User user = new User(userRegistrationDTO.getUsername(),userRegistrationDTO.getPassword());
-                    boolean isSuccess = userService.save(user);
-                    List<String> roleIds = userRegistrationDTO.getRoleIds();
-//            遍历List
-                    for (String roleId : roleIds) {
-//                插入user和role的关联表
-                        UserRoles userRoles = new UserRoles(roleId,user.getId());
-                        userService.saveUserRoles(userRoles);
-                    }
-
-                    if(isSuccess){
-                        System.out.println("存储成功");
-                        return Result.success();
-                    }
+//                    User user = new User(userRegistrationDTO.getUsername(),userRegistrationDTO.getPassword());
+//                    boolean isSuccess = userService.save(user);
+//                    List<String> roleIds = userRegistrationDTO.getRoleIds();
+////            遍历List
+//                    for (String roleId : roleIds) {
+////                插入user和role的关联表
+//                        UserRoles userRoles = new UserRoles(roleId,user.getId());
+//                        userService.saveUserRoles(userRoles);
+//                    }
+//
+//                    if(isSuccess){
+//                        System.out.println("存储成功");
+//                        return Result.success();
+//                    }
                     return Result.internalServerError();
                 }else{
                     return Result.msgError("用户已存在");
