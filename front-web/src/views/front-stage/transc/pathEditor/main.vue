@@ -1,11 +1,24 @@
 <template>
     <div class="container">
-        <svg id="svgEl" ref="svgEl" @mousedown="mouseDownForDrag($event)" width="100" height="100" viewBox="0 0 200 200">
-            <rect width="100" height="100" x="0" fill="#008d46" />
+        <!--  style="width: 100vw;height: 100vh;" -->
+        <svg id="svgEl" ref="svgEl" @mousedown="mouseDownForDrag($event)"style="height: 100vh;" :viewBox="`0 0 ${svgParam.width} ${svgParam.height}`">
+            <!-- <rect width="100" height="100" x="0" fill="#008d46" /> -->
+            <line v-for="i in svgParam.num_x" x1="0" :y1="i*10" :x2="svgParam.width" :y2="i*10" stroke="#ccc" stroke-width="0.1px"/>
+            <line v-for="i in svgParam.num_y" :x1="i*10" :y1="0" :x2="i*10" :y2="svgParam.height" stroke="#ccc" stroke-width="0.1px"/>
         </svg>
         <div class="menu-bar-x">
             <div class="bar-item mobile-menu" @click="fold = !fold">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.297 5.234a2.6 2.6 0 0 1 1.937-1.937 5.54 5.54 0 0 1 2.532 0 2.6 2.6 0 0 1 1.937 1.937c.195.833.195 1.7 0 2.532a2.6 2.6 0 0 1-1.937 1.937c-.833.195-1.7.195-2.532 0a2.6 2.6 0 0 1-1.937-1.937 5.55 5.55 0 0 1 0-2.532Z" stroke="#dbddde" stroke-width="1.5"/><path d="M3.297 16.234a2.6 2.6 0 0 1 1.937-1.937 5.55 5.55 0 0 1 2.532 0 2.6 2.6 0 0 1 1.937 1.937c.195.833.195 1.7 0 2.532a2.6 2.6 0 0 1-1.937 1.937c-.833.195-1.7.195-2.532 0a2.6 2.6 0 0 1-1.937-1.937 5.55 5.55 0 0 1 0-2.532Z" stroke="#0095FF" stroke-width="1.5"/><path d="M14.297 5.234a2.6 2.6 0 0 1 1.937-1.937 5.54 5.54 0 0 1 2.532 0 2.6 2.6 0 0 1 1.937 1.937c.195.833.195 1.7 0 2.532a2.6 2.6 0 0 1-1.937 1.937c-.833.195-1.7.195-2.532 0a2.6 2.6 0 0 1-1.937-1.937 5.55 5.55 0 0 1 0-2.532Zm0 11a2.6 2.6 0 0 1 1.937-1.937 5.55 5.55 0 0 1 2.532 0 2.6 2.6 0 0 1 1.937 1.937c.195.833.195 1.7 0 2.532a2.6 2.6 0 0 1-1.937 1.937c-.833.195-1.7.195-2.532 0a2.6 2.6 0 0 1-1.937-1.937 5.55 5.55 0 0 1 0-2.532Z" stroke="#dbddde" stroke-width="1.5"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M3.297 5.234a2.6 2.6 0 0 1 1.937-1.937 5.54 5.54 0 0 1 2.532 0 2.6 2.6 0 0 1 1.937 1.937c.195.833.195 1.7 0 2.532a2.6 2.6 0 0 1-1.937 1.937c-.833.195-1.7.195-2.532 0a2.6 2.6 0 0 1-1.937-1.937 5.55 5.55 0 0 1 0-2.532Z"
+                        stroke="#dbddde" stroke-width="1.5" />
+                    <path
+                        d="M3.297 16.234a2.6 2.6 0 0 1 1.937-1.937 5.55 5.55 0 0 1 2.532 0 2.6 2.6 0 0 1 1.937 1.937c.195.833.195 1.7 0 2.532a2.6 2.6 0 0 1-1.937 1.937c-.833.195-1.7.195-2.532 0a2.6 2.6 0 0 1-1.937-1.937 5.55 5.55 0 0 1 0-2.532Z"
+                        stroke="#0095FF" stroke-width="1.5" />
+                    <path
+                        d="M14.297 5.234a2.6 2.6 0 0 1 1.937-1.937 5.54 5.54 0 0 1 2.532 0 2.6 2.6 0 0 1 1.937 1.937c.195.833.195 1.7 0 2.532a2.6 2.6 0 0 1-1.937 1.937c-.833.195-1.7.195-2.532 0a2.6 2.6 0 0 1-1.937-1.937 5.55 5.55 0 0 1 0-2.532Zm0 11a2.6 2.6 0 0 1 1.937-1.937 5.55 5.55 0 0 1 2.532 0 2.6 2.6 0 0 1 1.937 1.937c.195.833.195 1.7 0 2.532a2.6 2.6 0 0 1-1.937 1.937c-.833.195-1.7.195-2.532 0a2.6 2.6 0 0 1-1.937-1.937 5.55 5.55 0 0 1 0-2.532Z"
+                        stroke="#dbddde" stroke-width="1.5" />
+                </svg>
             </div>
             <div class="bar-item">
                 <div class="label">文件</div>
@@ -16,35 +29,60 @@
             </div>
         </div>
         <div ref="resizePannelEl" class="menu-pannel-x">
-            <div :class="{'collapse-btn':true,'fold':fold}" @click="fold = !fold">
+            <div :class="{ 'collapse-btn': true, 'fold': fold }" @click="fold = !fold">
                 <svg>
                     <path d="M 0 5 L 4 10 L 4 8 L 1 5 L 4 2 L 4 0" fill="#fff"></path>
                 </svg>
             </div>
-            <div ref="resizeBarEl" @mousedown="mouseDowForResize($event)" @dblclick="resetSize" class="resize-controler"></div>
+            <div ref="resizeBarEl" @mousedown="mouseDowForResize($event)" @dblclick="resetSize"
+                class="resize-controler"></div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts" name="PathEditor">
-import { ref, onMounted,onBeforeUnmount,watch } from 'vue'
-import {usePathEditorStore} from '@/stores/path-editor'
+import { ref, onMounted, onBeforeUnmount, watch, reactive } from 'vue'
+import { usePathEditorStore } from '@/stores/path-editor'
 
 let svgEl = ref<SVGSVGElement | null>(null);
-let resizeBarEl = ref<Element | null>(null);
-let resizePannelEl = ref<Element | null>(null);
+let resizeBarEl = ref<HTMLElement | null>(null);
+let resizePannelEl = ref<HTMLElement | null>(null);
 
 const currentWidth = ref<Number>(0);
 
+const svgParam = reactive<{
+    width: number,
+    height: number,
+    num_x:number,
+    num_y:number,
+    view: {
+        x: number,
+        y: number,
+        width: number,
+        height: number
+    }
+}>({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    num_x:Math.floor(window.innerHeight/10),
+    num_y:Math.floor(window.innerWidth/10),
+    view: {
+        x: 0,
+        y: 0,
+        width: 250,
+        height: 300
+    }
+})
+
 const fold = ref(false);
-watch(fold,(newV)=>{
-    if(newV){
-        if(resizePannelEl.value){
+watch(fold, (newV) => {
+    if (newV) {
+        if (resizePannelEl.value) {
             resizePannelEl.value.style.width = `${0}px`;
             resizePannelEl.value.classList.add('fold');
         }
-    }else{
-        if(resizePannelEl.value){
+    } else {
+        if (resizePannelEl.value) {
             resizePannelEl.value.style.width = `${currentWidth.value}px`;
             resizePannelEl.value.classList.remove('fold');
         }
@@ -52,10 +90,10 @@ watch(fold,(newV)=>{
 })
 const store = usePathEditorStore();
 
-const resetSize = ()=>{
+const resetSize = () => {
     let width = store.defaultWidth;
     if (resizePannelEl.value) {
-        resizePannelEl.value.style.width = `${width?width:250}px`;
+        resizePannelEl.value.style.width = `${width ? width : 250}px`;
     }
 }
 
@@ -66,7 +104,7 @@ const mouseDowForResize = (e: MouseEvent) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
     // 可以在这里添加其他逻辑，比如开始监听 mousemove 事件
-    document.addEventListener('mousemove',moveForResize);
+    document.addEventListener('mousemove', moveForResize);
     document.addEventListener('mouseup', mouseUp);
 }
 const moveForResize = (e: MouseEvent) => {
@@ -75,7 +113,7 @@ const moveForResize = (e: MouseEvent) => {
         const mouseX = e.clientX;
         const minWidth = 200;
         const maxWidth = window.innerWidth - 300;
-        if(mouseX <= 30){
+        if (mouseX <= 30) {
             console.log("折叠");
             fold.value = true;
         }
@@ -91,7 +129,7 @@ const mouseDownForDrag = (e: MouseEvent) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
     // 可以在这里添加其他逻辑，比如开始监听 mousemove 事件
-    document.addEventListener('mousemove',moveForDrag);
+    document.addEventListener('mousemove', moveForDrag);
     document.addEventListener('mouseup', mouseUp);
 }
 const moveForDrag = (e: MouseEvent) => {
@@ -110,28 +148,55 @@ const mouseUp = () => {
     document.removeEventListener('mousemove', moveForResize);
     document.removeEventListener('mousemove', moveForDrag);
     document.removeEventListener('mouseup', mouseUp);
+    document.removeEventListener("keydown", handleKeyDrag)
+    // document.removeEventListener("keydown", handleKeyWheel)
+    document.removeEventListener("keyup", handleKeyDrag)
+    // document.removeEventListener("keyup", handleKeyWheel)
 }
 
-const handleKeyDrag = (e:KeyboardEvent)=>{
+const handleKeyDrag = (e: KeyboardEvent) => {
+    console.log(e); 
     e.preventDefault();
-    if(e.code === 'Space' && !e.repeat){
+    if (e.code === 'Space' && !e.repeat) {
         document.body.style.cursor = 'grab';
         // document.addEventListener('mousemove', moving);
         // document.addEventListener('mouseup', mouseUp);
     }
-    if(e.type === 'keyup'){
-        mouseUp()
+    if((e.code === 'ControlLeft' || e.code === 'ControlRight') && !e.repeat){
+        console.log("触发");
     }
+    // if (e.type === 'keyup') {
+    //     mouseUp()
+    // }
 }
+// const handleKeyWheel = (e: KeyboardEvent) => {
+//     e.preventDefault();
+//     console.log(e);
+    
+//     // if (e.code === 'Space' && !e.repeat) {
+//     //     document.body.style.cursor = 'grab';
+//     //     document.addEventListener('mousemove', moving);
+//     //     // document.addEventListener('mouseup', mouseUp);
+//     // }
+//     if (e.type === 'keyup') {
+//         mouseUp()
+//     }
+// }
 onMounted(() => {
+    // svgEl.value?.style.width = 100 +'vw';
+    // svgEl.value?.height = 100 +'vh';
     currentWidth.value = store.defaultWidth;
-    document.addEventListener("keydown",handleKeyDrag)
-    document.addEventListener("keyup",handleKeyDrag)
+    document.addEventListener("keydown", handleKeyDrag)
+    document.addEventListener("keyup", handleKeyDrag)
+    // document.addEventListener("keydown", handleKeyWheel)
+    // document.addEventListener("keyup", handleKeyWheel)
 });
 
-onBeforeUnmount(()=>{
-    document.removeEventListener("keydown",handleKeyDrag)
-    document.removeEventListener("keyup",handleKeyDrag)
+onBeforeUnmount(() => {
+    document.removeEventListener("keydown", handleKeyDrag)
+    // document.removeEventListener("keydown", handleKeyWheel)
+    document.removeEventListener("keyup", handleKeyDrag)
+    // document.removeEventListener("keyup", handleKeyWheel)
 })
 </script>
 
@@ -140,24 +205,26 @@ onBeforeUnmount(()=>{
     display: flex;
     flex-direction: column;
     font-size: 14px;
-    background-color: #24292E;
+    background-color: #000000;
     position: relative;
 
-    #svgEl{
-        z-index: -1;
+    #svgEl {
+        z-index: 1;
         inset: 0;
         position: absolute;
     }
 
-    .menu-bar-x{
+    .menu-bar-x {
+        z-index: 5;
         display: flex;
         align-items: center;
         color: #dbddde;
         padding: 0 5px;
         height: 28px;
-        background-color:#24292E;
+        background-color: #24292E;
         border-bottom: 1px solid #1B1F23;
-        .bar-item{
+
+        .bar-item {
             background-color: inherit;
             position: relative;
             width: 60px;
@@ -166,32 +233,36 @@ onBeforeUnmount(()=>{
             justify-content: center;
             align-items: center;
             transition: 0.1s;
-            svg{
+
+            svg {
                 width: 70%;
                 height: 70%;
                 object-fit: cover;
             }
 
-            &.mobile-menu{
+            &.mobile-menu {
                 display: none;
             }
 
-            .label{
+            .label {
                 font-size: 12px;
                 padding: 5px 10px;
                 // display: flex;
                 // justify-content: center;
                 // align-items: center;
             }
-            &:hover{
+
+            &:hover {
                 cursor: pointer;
                 background-color: #35393D;
             }
-            &:hover .more{
+
+            &:hover .more {
                 display: flex;
                 opacity: 1;
             }
-            .more{
+
+            .more {
                 display: none;
                 opacity: 0;
                 flex-direction: column;
@@ -200,24 +271,26 @@ onBeforeUnmount(()=>{
                 position: absolute;
                 top: 100%;
                 width: 60px;
-                transition:.1s;
+                transition: .1s;
             }
         }
     }
 
     .menu-pannel-x {
+        z-index: 4;
         position: relative;
         color: #dbddde;
-        box-sizing:border-box;
+        box-sizing: border-box;
         padding: 10px 5px;
         width: min(100vw, 250px);
         height: calc(100vh - 29px);
-        background-color:#1F2428;
-        &.fold{
-            padding:0;
+        background-color: #1F2428;
+
+        &.fold {
+            padding: 0;
         }
 
-        .collapse-btn{
+        .collapse-btn {
             cursor: pointer;
             display: flex;
             justify-content: center;
@@ -234,60 +307,67 @@ onBeforeUnmount(()=>{
             transform: translateY(-50%);
             transition: .1s;
 
-            &:hover{
+            &:hover {
                 background-color: #35393D;
             }
 
-            &.fold{
-                svg{
+            &.fold {
+                svg {
                     transform: rotate(180deg);
                     margin-right: 2px;
                 }
             }
-            svg{
+
+            svg {
                 margin-right: -2px;
                 width: 5px;
                 height: 10px;
             }
         }
-        &:has(.resize-controler:active){
+
+        &:has(.resize-controler:active) {
             background-color: #ffffff0e
         }
-        .resize-controler{
+
+        .resize-controler {
             position: absolute;
             width: 1px;
             height: 100%;
             right: -1px;
             top: 0;
             background-color: inherit;
-            
-            &:hover{
+
+            &:hover {
                 z-index: 2;
                 background-color: #005CC5;
                 cursor: e-resize;
                 transform: scaleX(2.5);
             }
-            
+
         }
     }
 
 }
+
 /* 针对屏幕宽度小于 480px 的设备应用样式 */
 @media (max-width: 480px) {
     .container {
-        width: 100%; 
+        width: 100%;
         height: auto;
     }
-    .mobile-menu{
+
+    .mobile-menu {
         display: flex !important;
     }
-    .collapse-btn{
+
+    .collapse-btn {
         display: none !important;
     }
 
     /* 其他样式调整 */
     .some-element {
-        font-size: 14px; /* 调整字体大小 */
+        font-size: 14px;
+        /* 调整字体大小 */
     }
 }
 </style>
