@@ -22,6 +22,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws IOException, ServletException {
         String requestURI = request.getRequestURI();
+        System.out.println("开始--------------------------------------------");
         // 检查请求路径是否需要拦截
         if (shouldFilter(requestURI)) {
             response.setContentType("application/json; charset=UTF-8");
@@ -38,12 +39,10 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 } else {
                     // 如果没有授权头或者授权头无效
                     sendUnauthorizedResponse(response, Result.unauthorized());
-                    return;
                 }
             } catch (Exception e) {
                 // 处理 token 验证异常
                 sendUnauthorizedResponse(response, Result.internalServerError());
-                return;
             }
         }else{
             filterChain.doFilter(request, response);

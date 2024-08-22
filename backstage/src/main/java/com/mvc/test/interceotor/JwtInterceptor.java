@@ -22,6 +22,7 @@ public class JwtInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         if (handler instanceof HandlerMethod) {
+            System.out.println("还得是这个");
             HandlerMethod handlerMethod = (HandlerMethod) handler;
             VerifyToken verifyToken = handlerMethod.getMethodAnnotation(VerifyToken.class);
             if (verifyToken != null && verifyToken.required()) {
@@ -56,7 +57,8 @@ public class JwtInterceptor implements HandlerInterceptor {
                         }
 
                     }
-                }else{
+                }
+                else{
                     response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                     response.setContentType("application/json; charset=UTF-8");
                     Result result = new Result(-1, "请检查Header请求头确认是Bearer验证", null);

@@ -1,5 +1,6 @@
 package com.mvc.test.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mvc.test.DTO.UserDTO.UserDTO;
 import com.mvc.test.annotation.VerifyToken;
 import com.mvc.test.entity.Permissions;
@@ -8,6 +9,7 @@ import com.mvc.test.entity.User.User;
 import com.mvc.test.mapper.PermissionMapper;
 import com.mvc.test.service.RolesService;
 import com.mvc.test.service.UserService;
+import com.mvc.test.service.Uservice;
 import com.mvc.test.utils.JwtUtils;
 import com.mvc.test.utils.Result;
 import io.swagger.annotations.Api;
@@ -40,6 +42,8 @@ public class UserController {
     private RolesService rolesService;
     @Resource
     private PermissionMapper permissionMapper;
+    @Autowired
+    private Uservice uservice;
 
     @ApiOperation(value = "获取Token")
     @PostMapping("/login")
@@ -132,4 +136,17 @@ public class UserController {
 //        }
 //        return Result.success();
     }
+
+//    @VerifyToken
+    @ApiOperation(value = "测试不用权限")
+    @GetMapping("/test")
+    public Result test(){
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("username","admin");
+        User user = new User();
+        List<Map<String,Object>> users = uservice.listMaps(queryWrapper);
+        return Result.success(users);
+    }
+
 }
+

@@ -1,13 +1,19 @@
 package com.mvc.test.entity.User;
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Data
 @TableName(value = "users")
-public class User {
+@NoArgsConstructor
+public class User extends Model<User> {
+    public enum Status {
+        ACTIVE, INACTIVE, LOCKED, DISABLED
+    }
     @TableId(value = "id",type = IdType.AUTO)
     private String id;
     @TableField(value = "username")
@@ -16,24 +22,6 @@ public class User {
     private String password;
     @TableField(value = "created_at",fill = FieldFill.INSERT)
     private Date createdAt;
-
-//    public String getId() {
-//        return id;
-//    }
-//
-//    public String getUsername() {
-//        return username;
-//    }
-//
-//    public void setUsername(String username) {
-//        this.username = username;
-//    }
-//
-//    public String getPassword() {
-//        return password;
-//    }
-//
-//    public void setPassword(String password) {
-//        this.password = password;
-//    }
+    @TableField(value = "status")
+    private Status status;
 }
