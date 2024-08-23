@@ -12,11 +12,18 @@ public class Result<T> {
     private int code;
     private String message;
     private T data;
+    private long total;
 
     public Result(int code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
+    }
+    public Result(int code, String message, T data, long total) {
+        this.code = code;
+        this.message = message;
+        this.data = data;
+        this.total = total;
     }
 
     // 成功返回带数据
@@ -27,6 +34,11 @@ public class Result<T> {
     // 成功返回带数据
     public static <T> Result<T> success(T data) {
         return new Result<>(0, "操作成功", data);
+    }
+
+    // 成功返回带数据
+    public static <T> Result<T> success(T data, long total) {
+        return new Result<>(0, "操作成功", data, total);
     }
 
     // 成功返回不带数据

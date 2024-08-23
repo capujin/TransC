@@ -1,4 +1,4 @@
-package com.mvc.test.entity;
+package com.mvc.test.entity.User;
 
 import lombok.Data;
 

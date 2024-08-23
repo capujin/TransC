@@ -14,6 +14,9 @@ import springfox.documentation.spring.web.plugins.Docket;
 import java.util.Arrays;
 import java.util.List;
 
+// http://localhost:2408/swagger-ui/index.html#/
+// 访问swagger-ui网址
+
 @EnableOpenApi
 @Configuration
 public class SwaggerConfig {
@@ -33,7 +36,7 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Spring Boot 2.7.6 使用 Swagger 3.0.0 构建 RESTful APIs")
-                .description("更多Spring Boot相关文章请关注：http://blog.didispace.com/")
+//                .description("更多Spring Boot相关文章请关注：http://blog.didispace.com/")
                 .version("8.0")
                 .build();
     }
