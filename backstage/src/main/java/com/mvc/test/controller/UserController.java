@@ -3,6 +3,7 @@ package com.mvc.test.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.mvc.test.DTO.RolesDTO.RolesPermissionDTO;
 import com.mvc.test.entity.User.User;
 import com.mvc.test.service.UserService;
 import com.mvc.test.utils.Result;
@@ -10,6 +11,7 @@ import io.swagger.annotations.ApiOperation;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,5 +67,49 @@ public class UserController {
         long total = userPage.getTotal();
         return Result.success(userMaps,total);
     }
+
+    @Tag(name = "管理员")
+    @ApiOperation(value = "修改用户密码")
+    @PutMapping("/admin/password/{id}")
+    public Result updatePassword(@PathVariable("id") Long id){
+
+        return Result.success();
+    }
+
+    @Tag(name = "管理员")
+    @ApiOperation(value = "获取角色列表")
+    @GetMapping("/admin/roles")
+    public Result getRoles(
+            @Parameter(description = "当前页码", example = "1") @RequestParam Integer page_num,
+            @Parameter(description = "每页条数", example = "10") @RequestParam Integer page_size
+    ){
+
+        return Result.success();
+    }
+
+    @Tag(name = "管理员")
+    @ApiOperation(value = "新建角色")
+//    @Operation(
+//            summary = "学生添加接口",
+//            description = "学生添加接口",
+//            parameters = {},
+//            requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(
+//                    description = "学生信息DTO",
+//                    required = true,
+//                    content = {
+//                            @Content(
+//                                    mediaType = "application/json",
+//                                    schema = @Schema(implementation = RolesPermissionDTO.class)
+//                            )
+//                    }
+//            )
+//    )
+    @PostMapping("/admin/roles")
+    public Result createRole(
+           @RequestBody RolesPermissionDTO role
+    ){
+        return Result.success();
+    }
+
 }
 
