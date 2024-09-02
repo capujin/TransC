@@ -3,14 +3,19 @@ package com.mvc.test.DTO.RolesDTO;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@ApiModel(description = "角色信息")
+@Data
+@ApiModel(description = "新建角色")
+@NoArgsConstructor
 public class RolesPermissionDTO {
-    @Schema(name = "学生ID", description = "学生ID属性", format = "int64", example = "1")
-    @ApiModelProperty(value = "角色名称", example = "Admin")
+    @Schema(name = "角色名称", format = "string", example = "string")
     private String roleName;
-    @ApiModelProperty(value = "权限列表", example = "Admin")
-    private List<String> permission_ids;
+    @Schema(name = "权限列表", format = "list", example = "[]")
+//    @ApiModelProperty(value = "权限列表", example = "[]")
+    private List<Integer> permission_ids;
 }

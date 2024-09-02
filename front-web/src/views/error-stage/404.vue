@@ -110,7 +110,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 function navigate(name: string) {
-    router.push(`/${name}`); // 替换为你的目标路由
+    router.push(`/transc/admin/${name}`); // 替换为你的目标路由
 }
 
 const innerHeight = ref(0);

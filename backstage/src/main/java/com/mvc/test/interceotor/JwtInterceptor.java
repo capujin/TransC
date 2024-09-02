@@ -61,7 +61,7 @@ public class JwtInterceptor implements HandlerInterceptor {
                 else{
                     response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                     response.setContentType("application/json; charset=UTF-8");
-                    Result result = new Result(-1, "请检查Header请求头确认是Bearer验证", null);
+                    Result result = new Result(-1, "权限不足", null);
                     response.getWriter().write(objectMapper.writeValueAsString(result));
                     return false;
                 }

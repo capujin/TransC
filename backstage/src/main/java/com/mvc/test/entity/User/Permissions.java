@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Permissions  extends Model<Permissions> {
     @TableId(value = "id",type = IdType.AUTO)
-    private String id;
+    private Integer id;
     @TableField(value = "model")
     private String model;
     @TableField(value = "name")

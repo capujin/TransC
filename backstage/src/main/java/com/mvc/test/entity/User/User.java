@@ -15,7 +15,7 @@ public class User extends Model<User> {
         ACTIVE, INACTIVE, LOCKED, DISABLED
     }
     @TableId(value = "id",type = IdType.AUTO)
-    private String id;
+    private Integer id;
     @TableField(value = "username")
     private String username;
     @TableField(value = "password")

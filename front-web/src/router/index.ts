@@ -19,7 +19,7 @@ type Route = {
     title: string;
     type: 'folder' | 'view';
     alias?: string;
-    name: Symbol;
+    name: string;
     filePath?: string;
     route?: string;
     inNav: boolean;

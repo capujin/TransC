@@ -6,32 +6,32 @@ let homeRouter: Routes = [
     {
         title: '首页',
         type: 'view',
-        name: Symbol('adminIndex'),
+        name: 'adminIndex',
         route: '/admin',
         filePath: 'views/back-stage/main.vue',
         inNav: false,
         order: 0,
         permission: ['首页']
     },
-    {
-        title: '多源数据管理',
-        type: 'folder',
-        name: Symbol('jzt-data-manage'),
-        inNav: true,
-        order: 1,
-        children: [
-            {
-                title: '目标管理',
-                alias: '金字塔目标管理',
-                type: 'view',
-                name: Symbol('jzt-target'),
-                route: '/admin/target',
-                filePath: 'view/back-stage/targetData/main.vue',
-                inNav: true,
-                permission: ['金字塔目标管理'],
-            }
-        ]
-    },
+    // {
+    //     title: '多源数据管理',
+    //     type: 'folder',
+    //     name:'jzt-data-manage',
+    //     inNav: true,
+    //     order: 1,
+    //     children: [
+    //         {
+    //             title: '目标管理',
+    //             alias: '金字塔目标管理',
+    //             type: 'view',
+    //             name: 'jzt-target',
+    //             route: '/admin/target',
+    //             filePath: 'view/back-stage/targetData/main.vue',
+    //             inNav: true,
+    //             permission: ['金字塔目标管理'],
+    //         }
+    //     ]
+    // },
 ]
 
 // 处理顺序
