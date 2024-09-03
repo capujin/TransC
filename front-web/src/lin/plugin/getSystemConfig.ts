@@ -13,7 +13,7 @@ const getsystemConfigFunc = async function () {
             // 当 stageConfig 是数组时，使用 map 进行迭代
             return stageConfig.map(item => {
                 const oldName = item.name;
-                console.log(item);
+                // console.log(item);
                 
                 const newConfig: Route = {
                     ...item,
@@ -55,10 +55,10 @@ const getsystemConfigFunc = async function () {
     // }
     // 获取全部菜单标题
     const getMenus = function (menusTitleList: string[], pathPrefix: string) {
-        console.log("pathPrefix",pathPrefix);
+        // console.log("pathPrefix",pathPrefix);
         
         // menusTitleList:字符串数组['首页...'], pathPrefix:系统前缀字符串'\fs'
-        console.log("menusTitleList:", menusTitleList);
+        // console.log("menusTitleList:", menusTitleList);
         const menus = []       
         for (const item of backRouter) {
             const oldName = typeof item.name === 'symbol' ? item.name.description : item.name
@@ -116,10 +116,10 @@ const getsystemConfigFunc = async function () {
     }
 
     newBackStageConfig = newBackStageConfig.concat(updateBackStageConfig(stageConfig, system.route))
-    console.log("newBackStageConfig:", newBackStageConfig);
+    // console.log("newBackStageConfig:", newBackStageConfig);
 
     const menus = getMenus(['模拟菜单'], system.route.slice(1))
-    console.log("menus----------------:", menus);
+    // console.log("menus----------------:", menus);
     router.addRoute({
         path: `${system.route}/admin/login`,
         name: 'adminLogin',
@@ -179,8 +179,8 @@ const getsystemConfigFunc = async function () {
     //         }]
     //     })
     // })
-    console.log("后台管理路由：", backRouter);
-    console.log("后台管理路由2：", stageConfig);
+    // console.log("后台管理路由：", backRouter);
+    // console.log("后台管理路由2：", stageConfig);
     //     let map = [{
     //         path: '/',
     //         name: 'login',
@@ -195,7 +195,7 @@ const getsystemConfigFunc = async function () {
     //     map.map(i => (router.addRoute(i)))
 }
 export const getSystemConfigPlugin = async function () {
-    console.log("初始化getSystemConfigPlugin");
+    // console.log("初始化getSystemConfigPlugin");
 
     await getsystemConfigFunc()
     return router

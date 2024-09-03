@@ -1,6 +1,8 @@
 import { type App } from 'vue';
 import {
+    ElAvatar,
     ElButton,
+    ElBadge,
     ElContainer,
     ElAside,
     ElMenu,
@@ -26,7 +28,9 @@ import {
     ElSelect,
     ElOption,
     ElMessage,
-    ElLoading 
+    ElLoading,
+    ElRow,
+    ElCol
 } from 'element-plus'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 export default (app: App) => {
@@ -40,7 +44,14 @@ export default (app: App) => {
         .use(ElPagination)
         .use(ElCascader)
         .use(ElSelect)
-        .use(ElLoading);
+        .use(ElLoading)
+        .use(ElMenu)
+        .use(ElSubMenu)
+        .use(ElMenuItemGroup)
+        .use(ElMenuItem)
+        .use(ElAvatar)
+        .use(ElBadge)
+        .use(ElPopover);
     for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
         app.component(key, component)
     }

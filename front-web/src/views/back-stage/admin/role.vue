@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         角色增删改查
     </div>
 </template>
@@ -9,5 +9,7 @@
 </script>
 
 <style lang="scss" scoped>
-  
+  .container{
+    background-color: blueviolet;
+  }
 </style>

@@ -30,7 +30,7 @@ deepTravel(stageConfig, viewConfig => {
     viewName = 'MainView' as keyof typeof ViewsBack;
   }
   // 构造实际能用的view路由
-  console.log("`@/${viewConfig.filePath}`:", formatCompoentName(viewConfig.filePath));
+  // console.log("`@/${viewConfig.filePath}`:", formatCompoentName(viewConfig.filePath));
   const viewRouter = {
     path: viewConfig.route,
     name: viewConfig.name,

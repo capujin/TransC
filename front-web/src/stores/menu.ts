@@ -5,6 +5,7 @@ import portalPageConfig from '@/config/front_stage' // 引入舞台配置
 // 第一个参数是你的应用中 Store 的唯一 ID。
 export const useMenuStore = defineStore('menu', {
     state: () => ({ 
+        route:'/transc',
         system: '',
         systemConfig: [],
         portalStageConfig: portalPageConfig,
